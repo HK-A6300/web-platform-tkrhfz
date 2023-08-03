@@ -1,0 +1,657 @@
+@font-face {
+    font-family: 'DIN-Pro-400';
+    src: url("../fonts/D-DIN-PRO-400-Regular.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-500';
+    src: url("../fonts/D-DIN-PRO-500-Medium.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-600';
+    src: url("../fonts/D-DIN-PRO-600-SemiBold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-700';
+    src: url("../fonts/D-DIN-PRO-700-Bold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-800';
+    src: url("../fonts/D-DIN-PRO-800-ExtraBold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-900';
+    src: url("../fonts/D-DIN-PRO-900-Heavy.otf");
+}
+@font-face {
+    font-family: 'Antro-Vectra';
+    src: url("../fonts/Antro_Vectra.otf");
+}
+@font-face {
+    font-family: 'Antro-Vectra-Bold';
+    src: url("../fonts/Antro_Vectra_Bolder.otf");
+}
+p{
+    margin:0;
+}
+body{
+    font-family: "Bebas Neue","inter","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Yu Gothic","Meiryo",sans-serif;
+}
+
+ul{
+    list-style-type:none;
+    margin-bottom:0;
+}
+
+.cov-padding{
+    padding: 0 6.25vw;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-small {
+    border-radius: 1px;
+}
+
+.btn-large {
+    border-radius: 3px;
+}
+
+.bg-twitter {
+    background-color: #55acee;
+    color: #FFF;
+}
+
+.bg-mastodon {
+    background-color: #2b90d9;
+    color: #FFF;
+}
+
+.bg-facebook {
+    background-color: #3b5998;
+    color: #FFF;
+}
+
+.bg-linkedin {
+    background-color: #0079ba;
+    color: #FFF;
+}
+
+.bg-github {
+    background-color: #333;
+    color: #FFF;
+}
+
+.bg-qiita {
+    background-color: #79bd28;
+    color: #FFF;
+}
+
+.bg-misskey {
+    background-color: #00acc1;
+    color: #FFF;
+}
+
+.bg-soundcloud{
+    background-color: #ff3300;
+    color: #FFF;
+}
+
+.white{
+    color:white;
+}
+
+.no-padding{
+    padding:0;
+}
+
+.no-margin{
+    margin:0;
+}
+
+.intro-video{
+    color:#FFF;
+    position: relative;
+    height: 100vh;
+} 
+
+.video-area{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+.intro-video video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+
+    filter:brightness(85%);
+    filter:saturate(90%);
+}
+
+/*.intro-video .element{
+    width:20%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.intro-video img{
+    width:100%;
+    height:auto;
+}
+
+.intro-video .element h1{
+    font-size:22px;
+    font-family:"Shippori Mincho B1",serif;
+    letter-spacing:5px;
+    text-align:center;
+    color:white;
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}*/
+
+.intro-video ul{
+    display:none;
+    z-index:2;
+    width:100%;
+}
+.nav-element{
+    clear:both;
+}
+.nav-element-content{
+    width:100%;
+    cursor: pointer;
+    text-align:right;
+    margin-bottom:clamp(40px,4vw,73px);
+}
+#nav-element-end{
+    width:100%;
+    cursor: pointer;
+    text-align:right;
+}
+.nav-element>div>div{
+    width:145px;
+    height:1px;
+    background-color:#FFF;
+}
+.nav-element>div h1{
+    margin:0 20px 5px 0;
+    font-family:"Bebas Neue";
+    letter-spacing:6px;
+    font-size:28px;
+}
+.nav-element > div p{
+    margin:3px 23px 0 0;
+    letter-spacing:0px;
+    font-family:"Shippori Mincho B1",serif;
+}
+
+
+
+.element-div{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:clamp(26px,3.7vw,10000px);
+    height:100vh;
+    width:100vw;
+}
+.element-div > div{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.element-div #default{
+    display:none;
+    font-size:77px;
+    letter-spacing: 8px;
+    line-height:75px;
+    font-family: "Bebas Neue";
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-feature-settings:"palt";
+}
+#montserrat{
+    font-size:77px;
+    letter-spacing: 1px;
+    line-height:75px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-feature-settings:"palt";
+}
+#din{
+    font-family: "DIN-Pro-700";
+    font-size:77px;
+    letter-spacing: 2px;
+    line-height:75px;
+    font-feature-settings:"palt";
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.element-div h1 span{
+    display:inline-block;
+    margin:0 0 15px 0;
+}
+.element-div img{
+    position:absolute;
+    bottom:0;
+    width:100px;
+}
+.span-container,
+.checkbox {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.checkbox {
+  opacity: 0;
+  z-index: 100;
+}
+
+.span-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  z-index: 90;
+}
+
+.span-container span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  transition: all 250ms ease-out;
+  transform-origin: 0 0;
+}
+
+.checkbox:checked ~ .span-container span:nth-last-child(1) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.checkbox:checked ~ .span-container span:nth-last-child(2) {
+  transform: rotate(0deg) scale(0.2, 0.2);
+  opacity: 0;
+}
+
+.checkbox:checked ~ .span-container span:nth-last-child(3) {
+  transform: rotate(45deg) translate(0px, -1px);
+}
+.nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  background: #444;
+  transition: all 250ms ease-out;
+  transform: translateX(-100%);
+}
+.nav-container a {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  margin: 1rem auto;
+}
+.nav-container a:hover {
+  color: salmon;
+}
+.checkbox:checked ~ .nav-container {
+  transform: translateX(0%);
+}
+
+
+
+
+
+.fluid-olex{
+    padding:0 6.2vw!important;
+}
+
+
+
+
+
+
+
+#intro{
+    background-color:#fefefe;
+    padding:6vw 0 6vw 0;/*extra-smallで下のpadding狭すぎる気がする*/
+    height:100vh;
+    width:100vw;
+}
+#intro h1{
+    font-family:"Antro-Vectra-Bold","Barlow Condensed","Bebas Neue",sans-serif;
+    font-size:30px;
+    margin:0 0 0 5px;
+}
+#intro .row>div>div{
+    display:none;
+    width:70px;
+    background-color:#000;
+    height:2px;
+    margin: 7px 0 28px 0;
+}
+#intro h2{
+    font-size:57px;
+    letter-spacing: 10px;
+    line-height:82px;
+    margin:20px 0 40px 0;
+    font-weight: 500;
+    font-family: "Shippori Mincho B1",serif;
+}
+#intro h2 span{
+    font-size:54px;
+    letter-spacing: 14px;
+}
+#intro p{
+    font-size:14px;
+    letter-spacing:2px;
+    line-height:35px;
+}
+#intro img{
+    margin:0 auto;
+    display:block;
+    width:calc(100vh - 12vw);
+}
+@media screen and (max-width: 991px){
+    #intro{
+        height:auto;
+    }
+    #intro img{
+        margin-top:2.5vw;
+        width:60%;
+    }
+}
+
+
+
+
+#areas{
+    background-color:#F2F2F2;
+    padding:6vw 0 6vw 0;
+    width:100vw;
+    height:auto;
+}
+#areas .caption{
+    display:block;
+    text-align:center;
+    margin-bottom:50px;
+}
+#areas .caption h1{
+    display:block;
+    font-size:55px;
+    letter-spacing: 3px;
+    font-family:"Barlow Condensed","Bebas Neue",sans-serif;
+}
+#areas .caption div{
+    display:inline-block;
+    width:60px;
+    height:2px;
+    background-color:#000;
+    margin: 2px 0 25px 0;
+}
+#areas .caption p{
+    display:block;
+    text-align:center;
+    letter-spacing:2px;
+}
+
+
+
+/*common styles*/
+#areas .left-align ,#areas .right-align{
+    position:relative;
+    margin-bottom:250px;
+    text-align:center;
+}
+#areas .variable-position{
+    text-align:start;
+    display:inline-block;
+    max-width:960px;
+    width:100%;
+    position:relative;
+}
+#areas .container-xl h1{
+    font-family:"Shippori Mincho B1",serif;
+    font-weight:600;
+    font-size:120px;
+}
+#areas .container-xl h2{
+    display:inline-block;
+    font-family:"Bad Script",serif;
+    font-size:45px;
+}
+#areas .container-xl p{
+    font-family:"Shippori Mincho B1",serif;
+}
+#areas .container-xl img{
+    width:100%;
+    object-fit: cover;
+    aspect-ratio: 46/21;
+}
+#areas .container-xl .variable-position > div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:calc(100% + 85px);
+    width:200px;
+    height:50px;
+    padding:10px 13px;
+    background-color:#000;
+}
+#areas .container-xl .variable-position > div p{
+    display:block;
+    font-family: "Shippori Mincho B1",serif;
+    font-size:17px;
+    font-weight:500;
+    margin-right:8px;
+    letter-spacing: 1px;
+    color: #FFF;
+}
+#areas .container-xl .variable-position > div img{
+    display:block;
+    width:20px;
+    height:20px;
+    filter: invert(100%);
+}
+
+/*left-align styles*/
+#areas .container-xl .left-align h1{
+    position:absolute;
+    top:100%;
+    left:0;
+    transform:translate(0,-100%)translate(0,90px);
+}
+#areas .container-xl .left-align h2{
+    position:absolute;
+    top:0;
+    left:0;
+    letter-spacing: 2px;
+    margin-bottom:0;
+    transform-origin: left top;
+    transform:rotate(-90deg)translate(-100%,-79%);
+}
+#areas .container-xl .variable-position .vertical-left{
+    position:absolute;
+    top:-50px;
+    right:0;
+    transform:translate(50px,0);
+    writing-mode: vertical-rl;
+}
+#areas .container-xl .variable-position .vertical-left span{
+    display:inline-block;
+    padding:15px 10px;
+    margin: 0 10px;
+    font-size:27px;
+    letter-spacing: 2px;
+    background-color:#f2f2f2;
+}
+#areas .container-xl .variable-position .horizontal-left{
+    position:absolute;
+    bottom:85px;
+    right:-50px;
+    text-align:end;
+}
+#areas .container-xl .variable-position .horizontal-left span{
+    display:inline-block;
+    padding:10px 10px 10px 15px;
+    margin: 10px;
+    font-size:27px;
+    letter-spacing: 2px;
+    background-color:#f2f2f2;
+}
+#areas .container-xl .left-align .variable-position .explanation{
+    position:absolute;
+    width:45%;
+    bottom:-85px;
+    right:-50px;
+    background-color: #F2F2F2;
+    padding:25px;
+    font-size:14px;
+    line-height:30px;
+    letter-spacing: 1px;
+}
+#areas .container-xl .left-align .variable-position div{
+    top:calc(100% + 85px);
+    right:-50px;
+}
+
+
+
+/*right-align styles*/
+#areas .container-xl .right-align h1{
+    position:absolute;
+    top:100%;
+    left:100%;
+    transform:translate(-100%,-100%)translate(0,90px);
+    white-space: nowrap;
+}
+#areas .container-xl .right-align h2{
+    position:absolute;
+    top:0;
+    left:100%;
+    letter-spacing: 2px;
+    margin-bottom:0;
+    transform-origin: left top;
+    transform:rotate(90deg)translate(0,-80%);
+}
+#areas .container-xl .variable-position .vertical-right{
+    position:absolute;
+    top:-50px;
+    left:-50px;
+    writing-mode: vertical-rl;
+}
+#areas .container-xl .variable-position .vertical-right span{
+    display:inline-block;
+    padding:15px 10px;
+    margin: 0 10px;
+    font-size:27px;
+    letter-spacing: 2px;
+    background-color:#f2f2f2;
+}
+#areas .container-xl .variable-position .horizontal-right{
+    position:absolute;
+    bottom:85px;
+    left:-50px;
+    text-align:start;
+}
+#areas .container-xl .variable-position .horizontal-right span{
+    display:inline-block;
+    padding:10px 15px 10px 10px;
+    margin: 10px;
+    font-size:27px;
+    letter-spacing: 2px;
+    background-color:#f2f2f2;
+}
+#areas .container-xl .right-align .variable-position .explanation{
+    position:absolute;
+    width:45%;
+    bottom:-85px;
+    left:-50px;
+    font-size:14px;
+    line-height:30px;
+    background-color: #F2F2F2;
+    padding:25px 25px;
+    letter-spacing: 1px;
+}
+#areas .container-xl .right-align .variable-position div{
+    left:-50px;
+}
+
+
+/*regions-color styles*/
+.toyooka > div h2,.toyooka h1{
+    color:#095BAD;
+}
+.asago > div h2, .asago h1{
+    color:#D47444;
+}
+.yabu > div h2, .yabu h1{
+    color:#009E96;
+}
+.kami > div h2, .kami h1{
+    color:#D45D57;
+}
+.shinonsen > div h2, .shinonsen h1{
+    color:#309C56;
+}
+
+.toyooka > div img{
+    object-position: 50% 54%;
+}
+.asago > div img{
+    object-position: 50% 48%;
+}
+.yabu > div img{
+    object-position: 100% 45%;
+}
+.kami > div img{
+    object-position: 50% 95%;
+}
+.shinonsen > div img{
+    object-position: 100% 90%;
+}
+/*あーーー
+h2もposition:absolute;で浮かせて　variable-positionの中心を画像のwidthの中央にするか
+浮かせずに　variable-positionの中心を画像とh2のwidthの中央にするか迷う*/
+
+
+
+
+
+
+
+

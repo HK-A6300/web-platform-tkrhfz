@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'DIN-Pro-400';
+    src: url("../fonts/D-DIN-PRO-400-Regular.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-500';
+    src: url("../fonts/D-DIN-PRO-500-Medium.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-600';
+    src: url("../fonts/D-DIN-PRO-600-SemiBold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-700';
+    src: url("../fonts/D-DIN-PRO-700-Bold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-800';
+    src: url("../fonts/D-DIN-PRO-800-ExtraBold.otf");
+}
+@font-face {
+    font-family: 'DIN-Pro-900';
+    src: url("../fonts/D-DIN-PRO-900-Heavy.otf");
+}
+@font-face {
+    font-family: 'Antro-Vectra';
+    src: url("../fonts/Antro_Vectra.otf");
+}
+@font-face {
+    font-family: 'Antro-Vectra-Bold';
+    src: url("../fonts/Antro_Vectra_Bolder.otf");
+}
+body{
+    font-family: "inter","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Yu Gothic","Meiryo",sans-serif;
+    background-color:#EAEAEA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'inter',sans-serif;
+}
+
+ul{
+    list-style-type:none;
+    margin-bottom:0;
+}
+
+.cov-padding{
+    padding: 0 6.25vw;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-small {
+    border-radius: 1px;
+}
+
+.btn-large {
+    border-radius: 3px;
+}
+
+.bg-twitter {
+    background-color: #55acee;
+    color: #FFF;
+}
+
+.bg-mastodon {
+    background-color: #2b90d9;
+    color: #FFF;
+}
+
+.bg-facebook {
+    background-color: #3b5998;
+    color: #FFF;
+}
+
+.bg-linkedin {
+    background-color: #0079ba;
+    color: #FFF;
+}
+
+.bg-github {
+    background-color: #333;
+    color: #FFF;
+}
+
+.bg-qiita {
+    background-color: #79bd28;
+    color: #FFF;
+}
+
+.bg-misskey {
+    background-color: #00acc1;
+    color: #FFF;
+}
+
+.bg-soundcloud{
+    background-color: #ff3300;
+    color: #FFF;
+}
+
+.white{
+    color:white;
+}
+
+.avoid-stack{
+    position:relative;
+    z-index:1;
+    background-color:#EAEAEA;
+}
+
+.no-padding{
+    padding:0;
+}
+
+.no-margin{
+    margin:0;
+}
+
+.intro-video{
+    color:#FFF;
+    position: relative;
+    height: 100vh;
+} 
+
+.video-area{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+.intro-video video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+
+    filter:brightness(85%);
+    filter:saturate(90%);
+}
+
+.intro-video .element{
+    width:20%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.intro-video img{
+    width:100%;
+    height:auto;
+}
+
+.intro-video .element h1{
+    font-size:22px;
+    font-family:"Shippori Mincho B1",serif;
+    letter-spacing:5px;
+    text-align:center;
+    color:white;
+    -moz-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -ms-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro-video ul{
+    width:100%;
+}
+.nav-element{
+    clear:both;
+}
+.nav-element>div{
+    width:100%;
+    cursor: pointer;
+    text-align:right;
+    margin-bottom:clamp(40px,4vw,77px);
+}
+.nav-element>div>div{
+    width:135px;
+    height:1px;
+    background-color:#FFF;
+}
+.nav-element>div h1{
+    margin:0 15px 7px 0;
+    font-family:"Bebas Neue";
+    letter-spacing:3px;
+    font-size:25px;
+}
+.nav-element > div p{
+    margin:3px 18px 0 0;
+    letter-spacing:0px;
+    font-family:"Shippori Mincho B1",serif;
+}
+
+section{
+    background-color: #EAEAEA;
+    position:relative;
+    margin-top:5%;
+}
+
+.fluid-olex{
+    padding:0 6.2vw!important;
+}
+.side-deco{
+    position:absolute;
+    display:inline-block;
+    height:75px;
+    top:-75px;
+    left:0;
+    font-family:"Barlow Condensed",sans-serif;
+    transform-origin: left bottom;
+    letter-spacing: -1px;
+    transform:rotate(90deg);
+    font-weight: 300;
+    font-size:75px;
+    color:#000;
+}
+.side-deco span{
+    letter-spacing:-9.5px;
+    font-weight:100;
+}
+.sticky-margin{
+    height:100%;
+    width:100%;
+    padding-bottom:56.26%;/* 130/239*106　padding%は親要素のwidth基準*/
+}
+@media screen and (max-width: 992px){
+    .sticky .padding h1{
+        font-family:'Montserrat',sans-serif;
+        font-weight:600;
+        letter-spacing: 5px;
+        line-height:3.6rem;
+    }
+    .sticky-margin{
+        padding-bottom:0;
+    }
+    .sticky img{
+        display:none;
+    }
+    .side-deco{
+        display:none;
+    }
+}
+.sticky .padding h1{
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:2.8rem;
+    letter-spacing:5px;
+}
+.sticky img{
+    position:absolute;
+    top:100%;
+    left:-23%;
+    width:130%;
+    z-index:-1;
+    opacity:60%;
+    transform:translate(0,-100%);
+}   
+.text-bg-white{
+    background-color:#FFF;
+}
+.sticky .padding p{
+    font-family:"Montserrat";
+    font-weight:700;
+    font-size:16px;
+    line-height:2.2;
+    letter-spacing: 2px;
+}
+@media screen and (min-width: 992px){
+    .sticky{
+        height:100vh;
+        position:sticky;
+        top:0rem;
+        padding-bottom:56.26%;
+    }
+    .padding{
+        padding-top: 1.5rem;
+        padding-right: 4vw;
+        padding-left:2.6vw;
+    }
+}
+
+.photo-padding{
+    margin:3px;
+}
+
+.region-dec{
+    width:35%;
+    display: inline;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+.mendoi{
+    position:relative;
+    z-index: 2;
+    width:100%;
+    padding:12px;
+}
+.region-container{
+    padding:50px;
+    background-color:#CADFC6;
+}
+.region-container h1{
+    display:inline-block;
+    color:#4F9869;
+    font-family:'Montserrat',sans-serif;
+    font-weight:600;
+    letter-spacing: 5px;
+}
+
+.region-container p{
+    display:inline-block;
+    font-family:"Montserrat";
+    font-weight:700;
+    font-size:20px;
+    line-height:2.2;
+    letter-spacing: 1px;
+}
+.aspectwrapper{
+    position: relative;
+}
+.aspectwrapper:after{
+    padding-top: 75%;/*4:3*/
+    display: block;
+    content: "";
+}
+.aspectwrapper > .content{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+.region{
+    width:100%;
+    background-size:cover;
+    background-position:50% 50%;
+    position:relative;
+}
+.toyooka{
+    background:url(../img/test/Mask_group.png);
+}
+.asago{
+    background:url(../img/region-bg/asago.jpg);
+}
+.yabu{
+    background:url(../img/region-bg/yabu.jpeg);
+}
+.kami{
+    background:url(../img/test/Mask_group.png);
+}
+.shinonsen{
+    background:url(../img/test/Mask_group.png);
+}
+
+
+
+
+
